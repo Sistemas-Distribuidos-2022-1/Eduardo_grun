@@ -1,0 +1,21 @@
+- Rpc é baseado na observação de que uma chamada de procedimento é um mechanismo bem conhecido e bem entendido para transferir o controle e dados dentro de um programa em execução em um unico computador
+- Chamada de procedimentos é extendivel para prover a tranferencia de controle e dados por uma rede de comunicação.
+- Em uma chamada sincrona de um procedimento remoto, o chamador é suspenso durante a operação, os parametros são passados pela rede para o ambiente onde será executado o procedimento.
+- Quando um procedimento finaliza o seu resultado é enviado de volta para a maquina que fez a chamada como se o procedimento tivesse acontecido em uma maquina só.
+- Enquanto a maquina chamadadora está suspensa outros procedimentos podem ser executados.
+- Os aspectos atrativos dessa ideia, primeiramente é a semantica simples e clara, e a segunda é eficiencia, pois uma chamada a procedimento é simples o suficiente para ser de facil aplicação, e a terceira é generalização, em processamentos locais os procedimentos são estendiveis com pouca ou quase nenhuma alteração.
+- O RPC já é uma ideia bem definida e discutida mesmo na epoca da publicação do artigo, porem houve poucas ideias que eram escalaveis.
+- problemas diante do design do RPC: 
+	- a semantica precisa na chamada, o que fazer quando a semantica não é precisa?
+	- a semantica do endereço contendo os endereços na falta de endereçamento.
+	- a possibilidade de integração de chamadas remotas em sistemas futuros.
+	- a identificação da maquina sendo chamada. (binding)
+	- protocolos que se comuniquem e transfiram dados e o controle entre chamador e chamado.
+	- promover segurança e integridade em um uma comunicação aberta.
+- O stub é responsavel pela interpretação dos argumentos e resultados das chamadas de RPC.
+- BINDING está associado ao serviço de nomes. 
+- Questões do RPC:
+	- programação com interfaces.
+	- Semântica de chamada.
+	- transparencia de localização.
+	
